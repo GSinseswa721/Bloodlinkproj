@@ -1,12 +1,28 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; 
 import "../styles/signup.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import signuppic from '../assets/signuppic.gif'
+// import {Link} from 'react-router-dom'
 // import bigsignuppic1 from '../assets/signuppic1.png'
 
-
-
-function signup() {
+function Signup() {
+  const navigate = useNavigate();
+    function handleNavigate(event) {
+      event.preventDefault();
+      const selectedValue = event.target.value;
+      switch (selectedValue) {
+        case "User":
+          navigate("/signup");
+          break;
+        case "Hospital":
+          navigate("/hospitalsignup1");
+          break;
+        default:
+          console.log("you reached to the default");
+          return window.alert("Choose one of in given option");
+      }
+    }
     return (
         <>
             <section className="aline">
@@ -27,9 +43,12 @@ function signup() {
                         <br />
                         <form action="#" className="frm">
                             <label for="Role">Choose A Role:</label>
-                            <select id="Role" name="Role">
+                            <select id="Role" name="Role" onChange={handleNavigate}>
                                 <option value="User">User</option>
-                                <option value="Hospital">Hospital</option>
+                                <option value="Hospital">
+                                  Hospital
+                                  </option>
+
                             </select>
                             <br />
                             <br />
@@ -137,20 +156,21 @@ function signup() {
                             <span className="checkbox-agree"><input type="checkbox" className="box1" /> 
                              Agree To Terms and Conditions</span>
                           <br />
-                            <button className="alinesignn" onClick={alert('Account Created Successfull!!!!')}>Create Account</button>
+                            <button className="alinesignn">Create Account</button>
                             <br />
-                            <p>
+                            {/* <p>
                                 already have an Account?{" "}
                                 <a href="/login" className="alinelink">
                                     Log in here!
                                 </a>
-                            </p>
+                            </p> */}
                         </form>
                     </div>
                 </div>
             </section>
         </>
     );
-}
 
-export default signup;
+                  }
+export default Signup;
+

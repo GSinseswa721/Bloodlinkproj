@@ -19,6 +19,7 @@ exports.registerHospital = async (req, res) => {
             email,
             password, 
             location,
+            role: "Hospital",
             status: 'pending',
         });
 

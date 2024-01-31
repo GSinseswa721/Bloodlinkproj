@@ -52,6 +52,7 @@ const Home = () => {
     <>
     <div>
         < Navigation/>
+        
     </div>
       <div className="body">
         <section id="hero" class="d-flex align-items-center">

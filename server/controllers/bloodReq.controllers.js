@@ -2,6 +2,7 @@ const UserModel = require('../models/user.models');
 // const hospitalModel = require('../models/hospital.models');
 const nodemailer = require('nodemailer');
 const BloodRequestModel = require('../models/request.models');
+require('dotenv').config();
 
 
 
@@ -10,8 +11,8 @@ const sendEmail = async (recipient, subject, message) => {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'bloodlinkhospital@gmail.com',
-                pass: 'yiaf irii tdls snmk',
+                user: process.env.EMAIL,
+                pass: process.env.PASS,
             },
             tls: {
                 rejectUnauthorized: false

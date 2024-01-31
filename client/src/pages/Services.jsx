@@ -41,7 +41,7 @@ function Services() {
       <h4>Request Blood Bank</h4>
       <p>A blood bank is a facility or organization that collects, processes, tests, stores, and distributes blood and blood products to hospitals and healthcare facilities.</p>
       {/* <p>Find a donor near by in <br />case of emergency</p> */}
-      <button className='serbtn'><a href="#">Click Here</a></button>
+      <button className='serbtn'><a href="Login">Click Here</a></button>
       </div>
      </div>
      <div className='services3'>
@@ -54,7 +54,7 @@ function Services() {
       <p>
       Blood donation eligibility criteria can vary by country and organization, but generally, there are common guidelines that determine who can and cannot donate blood.</p>
       {/* <p>Join our campaign to <br />Understand blood donation</p> */}
-      <button className='serbtn'><a href="#">Click Here</a></button>
+      <button className='serbtn'><a href="/Documentation">Click Here</a></button>
       </div>
     </div>
     </div>

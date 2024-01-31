@@ -23,7 +23,7 @@ const sendAppointmentReminder = async (req, res, next) => {
         }
         
 
-        if (!user.email || !user.fullName || !hospital.email || !hospital.hospitalName) {
+        if (!user.email || !user.fullName || !hospital.email || !hospital.name) {
             console.error('User or hospital object is missing expected properties.');
             return;
         }
