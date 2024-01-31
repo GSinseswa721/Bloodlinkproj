@@ -1,0 +1,234 @@
+section{
+  height: 90vh;
+}
+.header{
+  padding-top: 80px;
+  margin-left: 45%;
+}
+.header span{
+  color: #CB2C31;
+}
+.services{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3;
+  padding-top: 3rem;
+  color: white;
+  /* border-radius: 30px; */
+ 
+}
+.calendar
+{
+  color: red;
+  width: 50px;
+  height: 50px;
+  margin-left: 40%;
+  /* background-color: #E9F2F4;  */
+  padding-top: 10px;
+ 
+}
+.ambulance{
+  color: red;
+  width: 50px;
+  height: 50px;
+  margin-left: 40% ;
+  padding-top: 10px;
+}
+.user{
+  color: red;
+  width: 50px;
+  height: 50px;
+  margin-left: 35% ;
+  /* padding-top: 5px; */
+}
+.services1{
+  padding: 0px 0px;
+  box-shadow: 0 0.188em 1.55em rgb(156, 156, 156);
+  border-radius: 20px;
+  padding: 0px 0px;
+  border: none;
+  margin-left: 30px;
+  border: 1px solid red;
+  width: 20rem;
+  height: 23rem;
+  position: relative;
+  overflow: hidden;
+ 
+}
+.services1 .calendar img{
+  width: 19rem;
+  height: 22rem;
+  display: block;
+  transition: transform 0.5s;
+ 
+}
+.services2{
+  padding: 0px 0px;
+  box-shadow: 0 0.188em 1.55em rgb(156, 156, 156);
+  border-radius: 20px;
+  padding: 0px 0px;
+  border: none;
+  margin-left: 30px;
+  border: 1px solid red;
+  width: 20rem;
+  height: 23rem;
+  position: relative;
+  overflow: hidden;
+}
+.services2 .ambulance img{
+  width: 19rem;
+  height: 22rem;
+  display: block;
+  transition: transform 0.5s;
+}
+.services3{
+  padding: 0px 0px;
+  box-shadow: 0 0.188em 1.55em rgb(156, 156, 156);
+  border-radius: 20px;
+  padding: 0px 0px;
+  border: none;
+  margin-left: 30px;
+  border: 1px solid red;
+  width: 20rem;
+  height: 23rem;
+  position: relative;
+  overflow: hidden;
+}
+.services3 .user img{
+  width: 19rem;
+  height: 22rem;
+  display: block;
+  transition: transform 0.5s;
+}
+.text1 {
+width: 100%; 
+height: 0;
+background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+border-radius: 10px;
+position: absolute; 
+left: 0;
+bottom: 0;
+overflow: hidden;  
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 0 40px;
+text-align: center; 
+font-size: 14px; 
+transition: height 0.5s;
+  /* padding-left: 50px; */
+}
+.text1 h4{
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.text2{
+width: 100%; 
+height: 0;
+background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+border-radius: 10px;
+position: absolute; 
+left: 0;
+bottom: 0;
+overflow: hidden;  
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 0 40px;
+text-align: center; 
+font-size: 14px; 
+transition: height 0.5s;
+  /* padding-left: 50px; */
+}
+.text2 h4 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.text3{
+width: 100%; 
+height: 0;
+background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+border-radius: 10px;
+position: absolute; 
+left: 0;
+bottom: 0;
+overflow: hidden;  
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 0 40px;
+text-align: center; 
+font-size: 14px; 
+transition: height 0.5s;
+  /* padding-left: 50px; */
+}
+.text3 h4{
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.text1 a{
+  margin-top: 20px;
+  color: #ff004f; 
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 50px;
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  text-align: center;
+  }
+  .text2 a{
+    margin-top: 20px;
+    color: #ff004f; 
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 50px;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    text-align: center;
+    }
+    .text3 a{
+      margin-top: 20px;
+      color: #ff004f; 
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 50px;
+      background: #fff;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      text-align: center;
+      }
+      .services1:hover img{
+        transform: scale(1.1);
+        }
+        .services1:hover .text1{
+          height: 100%;
+        }
+        .services2:hover img{
+          transform: scale(1.1);
+          }
+          .services2:hover .text2{
+            height: 100%;
+          }
+          .services3:hover img{
+            transform: scale(1.1);
+            }
+            .services3:hover .text3{
+              height: 100%;
+            }
+            .serbtn{
+            border: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            }
+            .f{
+              padding-top: 50px;
+            }

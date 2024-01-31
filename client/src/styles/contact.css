@@ -1,0 +1,7 @@
+.section_contact{
+    height: 150vh;
+}
+.img_contact{
+    position: relative;
+    transform: translate(-2%, 55%);
+}

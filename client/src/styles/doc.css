@@ -1,0 +1,38 @@
+
+    .sectionss {
+        margin-top: 50px;
+        height: 150vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sectionss h2{
+        text-align: center;
+    }
+    
+   .box11, .box12, .box13, .box14 {
+        width: 100%;
+        max-width: 600px; 
+         margin: 10px;
+        border: 2px solid #CB2C31;
+        padding: 15px;
+        box-shadow:  2px 6px 8px#F2C9CB;
+    }
+ 
+    .box12, .box14 {
+        
+        margin-left: 500px;
+    }
+    
+    #OnClick, #MyButton, #Button, #OnButton {
+        
+        margin-top: 10px;
+        background-color: #CB2C31;
+        box-shadow: 2px 5px 8px #395BA2;
+        color: white;
+    }
+    .docbtn{
+        padding: 7px 10px;
+        border: none;
+        border-radius: 10px;
+    }
