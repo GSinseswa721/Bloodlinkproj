@@ -1,0 +1,43 @@
+{
+  "name": "bloodlink-system-backend",
+  "version": "1.0.0",
+  "description": "\" BLOODLINK \" could refer to a platform, system, or service that connects blood donors with recipients in need. It might be an app, a website, or a database designed to efficiently match donors with compatible blood types to those requiring blood transfusions during emergencies or medical procedures.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SheCanCODE-Capstone-Projects/Bloodlink-System-Backend.git"
+  },
+  "keywords": [
+    "express",
+    "nodemon",
+    "nodejs",
+    "nodemailer",
+    "mongoose",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SheCanCODE-Capstone-Projects/Bloodlink-System-Backend/issues"
+  },
+  "homepage": "https://github.com/SheCanCODE-Capstone-Projects/Bloodlink-System-Backend#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.0",
+    "node-schedule": "^2.1.1",
+    "nodemailer": "^6.9.8",
+    "nodemon": "^3.0.2"
+  }
+}
