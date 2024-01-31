@@ -1,0 +1,22 @@
+.Part_side_bar{
+    
+    height: 100vh;
+    display: flex;
+}
+.main_side_bar{
+    width: 20rem;
+   
+    overflow: hidden;
+}
+.Part_top_outlet{
+    width: 100rem;
+  
+}
+.topbar{
+    
+    height: 20vh;
+}
+.ooutlet{
+    
+    height: 75vh;
+}

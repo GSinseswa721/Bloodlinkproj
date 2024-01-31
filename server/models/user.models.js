@@ -1,4 +1,3 @@
-// user.model.js
 const { Schema, model } = require('mongoose');
 
 
@@ -26,21 +25,24 @@ const UserSchema = new Schema({
     bloodGroup: {
         type: String,
         required: true,
+        enum: bloodGroups
     },
-    // bloodGroup: {type:String,
-    //              required: true},
     profilePicture: {
         type: String,
         required: true,
         default: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
     },
+    role: {
+        type: String,
+        default:'User'
+    },
     feedback:{
         type: String,
         require:false
     },
-    verified: {
-        type: Boolean,
-        default: false,
+    donationAvailability:{
+        start: {type: Date, required: false, default:null},
+        end : {type: Date, required: false, default:null}
     }
 }, {
     timestamps: true

@@ -31,6 +31,7 @@ const SignUp = async (req, res, next) => {
                 email: email,
                 password: hashedPassword,
                 fullName: fullName,
+                role: "User",
                 bloodGroup: bloodGroup,
                 password: hashedPassword
                 

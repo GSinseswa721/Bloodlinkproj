@@ -1,0 +1,89 @@
+
+.Side_Bar {
+    user-select: none;
+    position: fixed;
+    min-width: 200px;
+    width: 15vw;
+    height: 99.5vh;
+    background-color: var(--color-crust);
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.logo-dashboard h3{
+    color: #CB2C31;
+}
+.logoo{
+    position: relative;
+    animation-name: example;
+    animation-duration: 5s;
+}
+.logo-dashboard img {
+    
+    height: 80px;
+    width: 80px;
+}
+@keyframes example {
+        0%   { left:0px; top:0px;}
+        25%  { left:90px; top:0px;}
+        50%  { left:0px; top:0px;}
+}  
+
+.Side_Bar figure {
+    width: 100%;
+    margin: 20px 0;
+    color: var(--color-subtext);
+    overflow: hidden;
+}
+
+.Side_Bar figcaption {
+    font-size: 1.20em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.Side_Bar  {
+    margin: 0;
+    padding: 0;
+}
+
+.Side_Bar figcaption,
+.Side_Bar .LinkS {
+    padding-left: 30px;
+}
+
+.Side_Bar .LinkS.active,
+.Side_Bar .LinkS {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.15em;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    color: black;
+}
+
+.Side_Bar .LinkS.active,
+.Side_Bar .LinkS:hover {
+    border-left: 5px solid var(--color-blue);
+    border-radius: 2px;
+    color: var(--color-text);
+    background-color: var(--color-mantle);
+}
+
+.Side_Bar .settings {
+    margin-top: auto;
+}
+.icon{
+    width: 18px;
+    height: 18px;
+}

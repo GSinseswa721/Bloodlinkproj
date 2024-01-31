@@ -7,6 +7,10 @@ const hospitalSchema = new mongoose.Schema({
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     location: { type: String, required: true },
+    role: {
+        type: String, 
+        default: 'Hospital'
+    },
     status: { type: String, enum: ['pending', 'approved', 'denied'], default: 'pending' },
 });
 hospitalSchema.pre('save', async function (next) {

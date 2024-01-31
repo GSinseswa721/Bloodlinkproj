@@ -1,0 +1,29 @@
+.section_donate{
+    position: relative;
+    transform: translateY(5%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    gap: 60vh;
+}
+.second_par{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 0.15px solid darkred ;
+    border-radius: 25px;
+    box-shadow: 1px 1px 1.5px darkred;
+    width: 50rem;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.second_par h1{
+    font-size: 25px;
+}
+.second_par h3{
+    font-size: 15px;
+    border-bottom: 2px solid red;
+}
