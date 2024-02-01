@@ -18,6 +18,7 @@ const Appointment = () => {
   };
 
   const [value, onChange] = useState(new Date());
+  console.log(value);
 
   useEffect(() =>{
     var textWrapper = document.querySelector('.ml6 .letters');
