@@ -100,8 +100,8 @@ headers: {
             <option value="User">user</option>
             <option value="Admin">Admin</option>
             <option value="Hospital">Hospital</option>
-           </select>
-           <button className='login-btn' type="submit" >Login</button>
+           </select><br /><br />
+           <button className='login-btn' type="submit" onClick={handleButtonClick} >Login</button>
            </form>
            <p className='text'>Forgot password? <a href="">Click here</a></p>
            {/* <button className='login-btn' type="submit" >Login</button> */}

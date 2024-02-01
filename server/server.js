@@ -1,18 +1,21 @@
+require('dotenv').config();
 // server.js
 const express = require('express');
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
+// const dotenv = require('dotenv');
 const colors = require('colors');
 const allRoutes = require('./routes');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 
-dotenv.config();
+// dotenv.config();
 
 
 
 const app = express();
 const PORT = process.env.PORT;
+const MONGODB_URI = process.env.MONGODB_URL || 'mongodb://127.0.0.1:27017/BloodLink';
+
 
 var corsOptions = {
   origin: ['http://localhost:5174', 'http://192.168.196.82:5274', 'http://localhost:5174', 'http://127.0.0.1:5274'],
@@ -26,7 +29,7 @@ app.use(express.json());
 
 
 mongoose
-  .connect(process.env.MONGODB_URL)
+  .connect('mongodb://127.0.0.1:27017/BloodLink')
   .then(() => {
     app.use('/api/BL/v1/', allRoutes);
 
