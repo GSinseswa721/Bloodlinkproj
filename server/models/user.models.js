@@ -25,7 +25,7 @@ const UserSchema = new Schema({
     bloodGroup: {
         type: String,
         required: true,
-        enum: bloodGroups
+        // enum: bloodGroups
     },
     profilePicture: {
         type: String,
