@@ -84,6 +84,7 @@ headers: {
             <img className="img" src={Logo} alt="logo" />
           </div>
         </section>
+
         <div className='cover'>
         <form action="" method="post" className='input3
         ' placeholder="Role" onSubmit={handleSubmit}>
@@ -101,6 +102,23 @@ headers: {
           <p className='text'>Don't have an account? <a href="/signup">Sign Up here</a></p>
         </form>
         </div>
+
+        {/* <form action="" method="post" className='input3' placeholder="Role" onSubmit={handleSubmit}>
+          <h2 className='cover'>SignIn</h2>
+          <input type='text' name="email" value={formData.email} onChange={handleChange} placeholder='username'/><br/>
+          <input type='password'  name="password" value={formData.password} onChange={handleChange} placeholder='password'/>
+          <select value={selectedOption} onChange={handleOptionChange}>
+            <option value="Role"></option>
+            <option value="User">user</option>
+            <option value="Admin">Admin</option>
+            <option value="Hospital">Hospital</option>
+           </select>
+           <button className='login-btn' type="submit" onClick={handleButtonClick}>Login</button>
+          <p className='text'>Forgot password? <a href="">Click here</a></p>
+          <p className='text'>Don't have an account? <a href="/signup">Sign Up here</a></p>
+        </form>
+         */}
+
       </div>
     </>
   );

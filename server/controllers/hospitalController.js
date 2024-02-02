@@ -3,7 +3,7 @@ const Hospital = require('../models/Hospital');
  
 exports.registerHospital = async (req, res) => {
     try {
-        const { name, hospitalCode, email, password, location } = req.body;
+        const { hospitalName, hospitalCode, email, password, location } = req.body;
         const existingHospital = await Hospital.findOne({
             $or: [{ hospitalCode }, { email }],
         });
@@ -14,7 +14,7 @@ exports.registerHospital = async (req, res) => {
 
    
         const newHospital = await Hospital.create({
-            name,
+            hospitalName,
             hospitalCode,
             email,
             password, 
