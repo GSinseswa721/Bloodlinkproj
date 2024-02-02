@@ -8,12 +8,17 @@
 
 }
 
-a {
-  color: #fadcdc;
+#navbar a {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #2A3C46;
+  white-space: nowrap;
+  transition: 0.5s;
   text-decoration: none;
 }
 
-a:hover {
+#navbar a:hover {
   color: #f82424;
   text-decoration: none;
 }
@@ -98,27 +103,29 @@ h6,
 /**
 * Desktop Navigation 
 */
-.navbar {
+#navbar {
   padding: 0;
+  width: 800px;
 }
 
-.navbar ul {
+#navbar ul {
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: space-between;
   list-style: none;
   align-items: center;
 }
 
-.navbar li {
+#navbar li {
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding-right: 1.5rem;
+  /* padding-right: 1.5rem; */
 }
 
-.navbar a,
-.navbar a:focus {
+#navbar a,
+#navbar a:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -129,30 +136,58 @@ h6,
   transition: 0.5s;
 }
 
-.navbar a i,
-.navbar a:focus i {
+#navbar a i,
+#navbar a:focus i {
   font-size: 13px;
   line-height: 0;
   margin-left: 5px;
 }
 
-.navbar a:hover,
-.navbar li:hover>a {
+#navbar a:hover,
+#navbar li:hover>a {
   color: #CB2C31;
 }
 
-.navbar .active,
-.navbar .active:focus{
+#navbar .active,
+#navbar .active:focus{
   color: #CB2C31;
 }
-
-.navbar .getstarted:hover,
-.navbar .getstarted:focus:hover {
+#navbar .getstarted a{
+  color: white;
+  width: 150px;
+  text-align: center;
+  position: relative;
+  transform: translate(20%, 5%);
+}
+#navbar .getstarted:hover,
+#navbar .getstarted:focus:hover {
   color: #fff;
   background: #e77f82;
 } 
+.login_b
+{
+  color: white !important;
+}
+.getstartedd
+{
+  background-color: #a90404;
 
-.navbar .dropdown ul {
+  border-radius: 40px;
+  border: 1px solid transparent;
+  /* margin-right: 10px; */
+  margin-left: 5%;
+  padding-right: 40px;
+  
+}
+.getstartedd:hover{
+  background-color: #efe3e3;
+}
+.login_b:hover
+{
+  color: #a90404 !important;
+}
+
+#navbar .dropdown ul {
   display: block;
   position: absolute;
   left: 14px;
@@ -161,7 +196,7 @@ h6,
   padding: 10px 0;
   z-index: 99;
   opacity: 0;
-  visibility: hidden;
+  /* visibility: hidden; */
   background: #fff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
@@ -199,12 +234,12 @@ h6,
     display: block;
   }
 
-  .navbar ul {
+  #navbar ul {
     display: none;
   }
 }
 
-.navbar-mobile {
+#navbar-mobile {
   position: fixed;
   overflow: hidden;
   top: 0;
@@ -215,13 +250,13 @@ h6,
   transition: 0.3s;
 }
 
-.navbar-mobile .mobile-nav-toggle {
+#navbar-mobile .mobile-nav-toggle {
   position: absolute;
   top: 15px;
   right: 15px;
 }
 
-.navbar-mobile ul {
+#navbar-mobile ul {
   display: block;
   position: absolute;
   top: 55px;

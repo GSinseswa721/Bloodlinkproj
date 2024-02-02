@@ -2,8 +2,12 @@
     box-sizing: border-box;
     margin: 0;
 }
+.section_sign_in{
+    height:50px;
+}
 .logo{
-    margin-left: 50px;
+    padding: 0;
+    margin-left: 20px;
 }
 .img {
     width: 80px;
@@ -18,36 +22,51 @@
    position: relative;
    transform: translateY(20%);
    transform: translateX(120%);
-   border-radius: 1rem;
-   box-shadow: 0 0.188em 1.55em rgb(156, 156, 156); 
+    border-radius: 1rem;
+   box-shadow: 0 0.180em 0.50em rgb(156, 156, 156); 
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: space-around;
    padding: auto;
-   margin: 10px 30px;
+   /* margin: 10px 30px; */
 }
-.input1, .input2, .input3 {
-    box-shadow: 0 0.188em 1.55em rgb(156, 156, 156); 
-    box-sizing: border-box;
-    border-radius: 10rem;
-
+ .input3{
+    /* border: none;
+    border-bottom: 1px solid rgb(172, 169, 169);
+    height: 30px; 
+    border-radius: 10px;
+    background-color: white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+} 
+.input3 input{
+    width: 15rem;
+    height: 50px;
+    border-radius: 15px;
 }
-.cover input{
+.input3 select{
+    width: 15rem;
+    height: 50px;
+    border-radius: 15px;
+}
+/* .cover input{
     border: none;
     border-bottom: 1px solid rgb(172, 169, 169);
     padding: 20px 60px;
     border-radius: 2em;
     background-color: white;
-}
-.cover select
+} */
+/* .cover select
 {
     border: none;
     border-bottom: 1px solid rgb(172, 169, 169);
-    padding: 20px 90px; 
+    padding: 20px 60px;
     border-radius: 2em;
     background-color: white;
-}
+} */
 .cover a {
     color: rgb(196, 98, 98) !important;
 }
@@ -58,7 +77,9 @@
     background-color: #E69598 !important;
 }
 .login-btn{
-    padding: 10px 10px;
+    /* padding: 5px 5px; */
+    height: 30px;
+    width: 12rem;
     color: white;
     border: none;
     border-radius: 10px;

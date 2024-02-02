@@ -5,9 +5,7 @@ import '../styles/login.css'
 import { Alert } from 'bootstrap';
 
 const Login = () => {
-  const navigate = useNavigate();
-  const [selectedOption, setSelectedOption] = useState('');
-
+  // these are the backend functions to initiate the database
   const [formData, setFormData] = useState({
     email: '',
     password:'',
@@ -54,11 +52,13 @@ headers: {
 
   console.log('Form submitted!', formData);
 
-  // const handleOptionChange = (event) => {
-  //   setSelectedOption(event.target.value);
-    
-  // };
-  // console.log(handleOptionChange());
+  // these are the frontend functions to navigate the pages of the dashboards when logged in 
+  const navigate = useNavigate();
+  const [selectedOption, setSelectedOption] = useState('');
+
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
 
   const handleButtonClick = () => {
     // Use a switch or if-else statement to determine the destination based on the selected option
@@ -67,7 +67,7 @@ headers: {
         navigate('/main_dashboard');
         break;
       case 'Hospital':
-        navigate('#');
+        navigate('/main_hospital_dashboard');
         break;
       // Add more cases as needed
       default:
@@ -78,39 +78,30 @@ headers: {
     
   return (
     <>
-    <div>
-
-      <header >
-      <div className='logo'>
-        <img  className='img'src={Logo} alt="logo" />
-        </div>
-      </header>
-    <div className='cover'>
-        <h1>SignIn</h1>
-        
-       
-          <div className='input1'><input type='text' name="email" value={formData.email} onChange={handleChange} placeholder='username'/>
+      <div>
+        <section className="section_sign_in">
+          <div className="logo">
+            <img className="img" src={Logo} alt="logo" />
           </div>
-          <div  className='input2'>
-          <input type='password'  name="password" value={formData.password} onChange={handleChange} placeholder='password'/>
-          </div> 
-          <form className='input3' placeholder="Role" onSubmit={handleSubmit}>
-           <select >
-            <option value="Role"></option>
+        </section>
+        <div className='cover'>
+        <form action="" method="post" className='input3
+        ' placeholder="Role" onSubmit={handleSubmit}>
+          <h2>SignIn</h2>
+          <input type='text' name="email" value={formData.email} onChange={handleChange} placeholder='username'/><br/>
+          <input type='password'  name="password" value={formData.password} onChange={handleChange} placeholder='password'/><br/>
+          <select value={selectedOption} onChange={handleOptionChange}>
+            <option value="" disabled selected>Role</option>
             <option value="User">user</option>
             <option value="Admin">Admin</option>
             <option value="Hospital">Hospital</option>
-           </select>
-           <button className='login-btn' type="submit" >Login</button>
-           </form>
-           <p className='text'>Forgot password? <a href="">Click here</a></p>
-           {/* <button className='login-btn' type="submit" >Login</button> */}
-           <p className='text'>Don't have an account? <a href="/signup">Sign Up here</a></p>
-           </div>
-          
-    
-      
-    </div>
+           </select><br/>
+          <p className='text'>Forgot password? <a href="">Click here</a></p><br/>
+          <button className='login-btn' type="submit" onClick={handleButtonClick}>Login</button><br/>
+          <p className='text'>Don't have an account? <a href="/signup">Sign Up here</a></p>
+        </form>
+        </div>
+      </div>
     </>
   );
   }

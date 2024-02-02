@@ -18,6 +18,10 @@ import Notification from './pages/user_dashboard/Notification.jsx'
 import Main_dashboard from './pages/user_dashboard/Main_dashboard.jsx'
 import Main_page from './pages/Main_page.jsx'
 import Hospitalsignup1 from './pages/hospitalsignup1.jsx'
+import Main_hospital_dashboard from './pages/hospital_dashboard/Main_hospital_dashboard.jsx'
+import Profiles from './pages/hospital_dashboard/Profile.jsx'
+import Notifications from './pages/hospital_dashboard/Notification.jsx'
+import Appointments from './pages/hospital_dashboard/Appointment.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
       <React.StrictMode>
@@ -42,7 +46,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path='/main_dashboard/profile' element={<Profile />} />
             
           </Route>
-
+          <Route path='/main_hospital_dashboard' element={<Main_hospital_dashboard/>}>
+            <Route path='' element={<Profiles />} />
+            <Route path='/main_hospital_dashboard/appointments' element={<Appointments />} />
+            <Route path='/main_hospital_dashboard/notifications' element={<Notifications />} />
+            <Route path='/main_hospital_dashboard/profiles' element={<Profiles />} />
+            
+          </Route>
           </Routes>
         </Router>
       </React.StrictMode>

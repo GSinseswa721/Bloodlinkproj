@@ -26,7 +26,7 @@ app.use(express.json());
 
 
 mongoose
-  .connect(process.env.MONGODB_URL)
+  .connect("mongodb://localhost:27017/bloodlink")
   .then(() => {
     app.use('/api/BL/v1/', allRoutes);
 

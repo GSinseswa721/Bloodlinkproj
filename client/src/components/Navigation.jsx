@@ -14,7 +14,7 @@ const Navigation = () => {
     <>
         <div>
         <header id="Headers" class="fixed-top d-flex align-items-center">
-          <div class="container d-flex align-items-center justify-content-between">
+          <div class="container-fluid d-flex align-items-center justify-content-between">
             <div className="logo">
 
               <a href="#">
@@ -50,11 +50,11 @@ const Navigation = () => {
                   </Link>
                 </li>
 
-                <li class="getstarted scrollto">
-                  <Link to="/login" className="link">
+                <button class="getstartedd scrollto">
+                  <Link to="/login" className="login_b">
                   Login/Register
                   </Link>
-                </li>
+                </button>
               </ul>
               <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
