@@ -40,6 +40,39 @@ const Appointments = () => {
 
   });
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("http://localhost:4000/api/BL/v1/donate/intention", {
+method: 'POST',
+headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+       
+        alert('Form data submitted successfully!');
+      } else {
+        console.log(response)
+        alert('Email or password are incorrect');
+        // console.error('Failed to submit form data:', );
+      }
+    }  catch (error) {
+      // console.log("Email or password are incorrect")
+      // alert(res.error.message);
+      
+      // console.error('Error during form submission:', error.message);
+    }
+  };
+    // alert(JSON.stringify(formData, null, 2));
+    // window.alert(formData);
+
+
+  console.log('Form submitted!', formData);
+
+
 
 
 

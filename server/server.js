@@ -13,7 +13,7 @@ const cors = require('cors');
 
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4000;
 const MONGODB_URI = process.env.MONGODB_URL || 'mongodb://127.0.0.1:27017/BloodLink';
 
 
@@ -30,7 +30,7 @@ app.use(express.json());
 
 mongoose
 
-  .connect("mongodb://localhost:27017/bloodlink")
+  .connect("mongodb://localhost:27017/BloodLink")
 // =======
 //   .connect('mongodb://127.0.0.1:27017/BloodLink')
 // >>>>>>> e6c7d418365f00639c2de7ac858f803e25869bf3

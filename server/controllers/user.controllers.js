@@ -21,5 +21,47 @@ const expressDonationIntent = async (req, res, next) => {
     }
 }
 
-module.exports = expressDonationIntent;
+
+
+
+
+// Controller to get all users
+const getAllUsers = async (req, res) => {
+    try {
+        const allUsers = await UserModel.find({}, 'fullName bloodGroup');
+        res.json({ users: allUsers });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
+
+// admin.controllers.js
+
+const viewUserDetails = async (req, res) => {
+    try {
+        const userId = req.params.userId;
+        const user = await UserModel.findById(userId);
+
+        if (!user) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+
+        res.json({ user });
+    } catch (error) {
+        console.error('Error viewing user details:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+};
+
+
+
+
+
+
+
+module.exports = {
+    expressDonationIntent,
+    getAllUsers,
+    viewUserDetails
+};
 
