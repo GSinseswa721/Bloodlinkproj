@@ -13,6 +13,7 @@ allRoutes.use('/request-blood', bloodReqRoute);
 allRoutes.use('/bldreq', bloodReqRoute);
 allRoutes.use('/hospital', hospitalRoute);
 allRoutes.use('/donate', userRoute);
+allRoutes.use('/users', userRoute);
 allRoutes.use('/appointment', appointRoute);
 
 

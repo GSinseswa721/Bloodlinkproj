@@ -13,12 +13,12 @@ const cors = require('cors');
 
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4000;
 const MONGODB_URI = process.env.MONGODB_URL || 'mongodb://127.0.0.1:27017/BloodLink';
 
 
 var corsOptions = {
-  origin: ['http://localhost:5173', 'http://192.168.196.82:5273', 'http://localhost:5173', 'http://127.0.0.1:5273'],
+  origin: ['http://localhost:5174', 'http://192.168.196.82:5274', 'http://localhost:5174', 'http://127.0.0.1:5274'],
   methods: 'GET, POST, PUT, DELETE',
   allowedHeaders: 'Content-Type, Authorization'
 }
@@ -30,10 +30,11 @@ app.use(express.json());
 
 mongoose
 
-  .connect("mongodb://localhost:27017/bloodlink")
-// =======
-//   .connect('mongodb://127.0.0.1:27017/BloodLink')
-// >>>>>>> e6c7d418365f00639c2de7ac858f803e25869bf3
+
+
+  .connect('mongodb://127.0.0.1:27017/BloodLink')
+
+
   .then(() => {
     app.use('/api/BL/v1/', allRoutes);
 
@@ -42,5 +43,3 @@ mongoose
     });
   })
   .catch((err) => console.error("> Couldn't connect to MongoDB...".bgRed, err));
-
-

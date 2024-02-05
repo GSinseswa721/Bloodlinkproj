@@ -1,8 +1,9 @@
+require('dotenv').config();
 const UserModel = require('../models/user.models');
 // const hospitalModel = require('../models/hospital.models');
 const nodemailer = require('nodemailer');
 const BloodRequestModel = require('../models/request.models');
-require('dotenv').config();
+
 
 
 
