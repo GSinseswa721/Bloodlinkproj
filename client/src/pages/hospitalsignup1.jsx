@@ -26,7 +26,7 @@ function Hospitalsignup1() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5274/api/BL/v1/hospital/register', {
+      const response = await fetch('http://localhost:4000/api/BL/v1/hospital/register', {
         method:'POST',
         headers: {
           'Content-Type': 'application/json', 

@@ -30,7 +30,7 @@ const handleChange = (e) => {
       const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          const response = await fetch("http://localhost:4002/api/BL/v1/auth/signup", {
+          const response = await fetch("http://localhost:4000/api/BL/v1/auth/signup", {
     method: 'POST',
     headers: {
               'Content-Type': 'application/json',
