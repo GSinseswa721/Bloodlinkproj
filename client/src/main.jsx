@@ -22,6 +22,9 @@ import Main_hospital_dashboard from './pages/hospital_dashboard/Main_hospital_da
 import Profiles from './pages/hospital_dashboard/Profile.jsx'
 import Notifications from './pages/hospital_dashboard/Notification.jsx'
 import Appointments from './pages/hospital_dashboard/Appointment.jsx'
+import Main_admin_dashboard from './pages/admin-dashboard/Main_admin_dashboard'
+import Admite from './pages/admin-dashboard/admite.jsx'
+import Reports from './pages/admin-dashboard/reports.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
       <React.StrictMode>
@@ -53,6 +56,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path='/main_hospital_dashboard/profiles' element={<Profiles />} />
             
           </Route>
+          <Route path='/main_admin_dashboard' element={<Main_admin_dashboard/>}/>
+            <Route path='/main_admin_dashboard/reports' element={<Reports/>}/>
+            <Route path='/main_admin_dashboard/admit' element={<Admite/>}/>
           </Routes>
         </Router>
       </React.StrictMode>
