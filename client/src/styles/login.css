@@ -1,97 +1,49 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-}
+
 .section_sign_in{
-    height: 50vh;
-}
-.logo{
-    padding: 0;
-    margin-left: 20px;
+    height: 10vh;
 }
 .img {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
+    position: relative;
+    top: -2rem;
+
 }
 
 .cover {
-   background-color:white;
-   width: 30em;
-   height: 35em;
-   color: #CB2C31;
-   position: relative;
-   transform: translateY(-5%);
-   transform: translateX(100%);
-    border-radius: 1rem;
-   box-shadow: 0 0.180em 0.50em rgb(156, 156, 156); 
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: space-around;
+ 
    /* padding: auto; */
    /* margin: 10px 30px; */
 }
  .input3{
-    /* border: none;
-    border-bottom: 1px solid rgb(172, 169, 169);
-    height: 30px; 
-    border-radius: 10px;
-    background-color: white; */
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
 } 
 .input3 input{
-    width: 15rem;
+    width: 19rem;
     height: 50px;
-    border-radius: 15px;
+    border-radius: 0px;
 }
 .input3 select{
     width: 15rem;
     height: 50px;
     border-radius: 15px;
 }
-/* .cover input{
-    border: none;
-    border-bottom: 1px solid rgb(172, 169, 169);
-    padding: 20px 60px;
-    border-radius: 2em;
-    background-color: white;
-} */
-/* .cover select
-{
-    border: none;
-    border-bottom: 1px solid rgb(172, 169, 169);
-    padding: 20px 60px;
-    border-radius: 2em;
-    background-color: white;
-} */
 .cover a {
-    color: rgb(196, 98, 98) !important;
+    color: #f82424 !important;
 }
 .cover .text { 
     color: black;
 }
 .cover .login-btn {
-    background-color: #E69598 !important;
+    background-color: #f82424 !important;
 }
 .login-btn{
-    /* padding: 5px 5px; */
-    height: 30px;
-    width: 12rem;
+    height: 50px;
+    width: 19rem;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 6=5px;
 }
-/* .footer {
-    background: #e46d6d;
-    
-    border-top: 0.2rem solid var(--light-bg);
-    text-align: center;
-}
-.footer p {
-    font-size: 1.7rem;
-    color: var(--dark-gray);
-    margin-top: 3rem;
- }    */

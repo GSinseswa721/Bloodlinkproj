@@ -1,14 +1,17 @@
-import React,{useState}from 'react'
-import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react'
+import { Link, useNavigate } from "react-router-dom";
 import Logo from '../assets/Group 2410logo.svg'
 import '../styles/login.css'
-import { Alert } from 'bootstrap';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 
 const Login = () => {
   // these are the backend functions to initiate the database
   const [formData, setFormData] = useState({
     email: '',
-    password:'',
+    password: '',
 
   });
 
@@ -24,8 +27,8 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await fetch("http://localhost:4000/api/BL/v1/auth/signin", {
-method: 'POST',
-headers: {
+        method: 'POST',
+        headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
@@ -39,15 +42,15 @@ headers: {
         alert('Email or password are incorrect');
         // console.error('Failed to submit form data:', );
       }
-    }  catch (error) {
+    } catch (error) {
       // console.log("Email or password are incorrect")
       // alert(res.error.message);
 
       // console.error('Error during form submission:', error.message);
     }
   };
-    // alert(JSON.stringify(formData, null, 2));
-    // window.alert(formData);
+  // alert(JSON.stringify(formData, null, 2));
+  // window.alert(formData);
 
   console.log('Form submitted!', formData);
 
@@ -77,49 +80,30 @@ headers: {
 
   return (
     <>
-      <div>
-        <section className="section_sign_in">
-          <div className="logo">
-            <img className="img" src={Logo} alt="logo" />
-          </div>
-        </section>
-
+    <Navigation />
+      <div className='mt-5'>
         <div className='cover'>
-        <form action="" method="post" className='input3
-        ' placeholder="Role" onSubmit={handleSubmit}>
-          <h2>Sign in</h2>
-          <input type='text' name="email" value={formData.email} onChange={handleChange} placeholder='username'/><br/>
-          <input type='password'  name="password" value={formData.password} onChange={handleChange} placeholder='password'/><br/>
-          {/* <select value={selectedOption} onChange={handleOptionChange}>
-            <option value="" disabled selected>Role</option>
-            <option value="Admin">Admin</option>
-            <option value="Hospital">Hospital</option>
-           </select><br/> */}
-          <p className='text'>Forgot password? <a href="">Click here</a></p><br/>
-          <button className='login-btn' type="submit" onClick={handleButtonClick}>Login</button><br/>
-          <p className='text'>Don't have an account? <a href="/hospitalsignup1">Sign Up here</a></p>
-        </form>
+
+          <form action="" method="post" className='input3' onSubmit={handleSubmit}>
+            <Link to={'/home'}>
+            <section className="section_sign_in">
+              <div className="logo">
+                <img className="img" src={Logo} alt="logo" />
+              </div>
+            </section>
+            </Link>
+            
+            <h2>Sign in</h2>
+            <input type='text' className='form-control' name="email" value={formData.email} onChange={handleChange} placeholder='username' /><br />
+            <input type='password' name="password" value={formData.password} onChange={handleChange} placeholder='password' /><br />
+            <p className='text'>Forgot password? <a href="" style={{color:"#f82424"}}>Click here</a></p><br />
+            <button className='login-btn' style={{background:"#f82424"}} type="submit" onClick={handleButtonClick}>Login</button><br />
+            <p className='text'>Don't have an account? <a href="/hospitalsignup1">Sign Up here</a></p>
+          </form>
         </div>
-
-        {/* <form action="" method="post" className='input3' placeholder="Role" onSubmit={handleSubmit}>
-          <h2 className='cover'>SignIn</h2>
-          <input type='text' name="email" value={formData.email} onChange={handleChange} placeholder='username'/><br/>
-          <input type='password'  name="password" value={formData.password} onChange={handleChange} placeholder='password'/>
-          <select value={selectedOption} onChange={handleOptionChange}>
-            <option value="Role"></option>
-            <option value="User">user</option>
-            <option value="Admin">Admin</option>
-            <option value="Hospital">Hospital</option>
-           </select>
-           <button className='login-btn' type="submit" onClick={handleButtonClick}>Login</button>
-          <p className='text'>Forgot password? <a href="">Click here</a></p>
-          <p className='text'>Don't have an account? <a href="/signup">Sign Up here</a></p>
-        </form>
-         */}
-
       </div>
     </>
   );
-  }
+}
 
 export default Login

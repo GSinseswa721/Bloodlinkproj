@@ -20,7 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Router>
           <Routes>
           {/* Public Pages */}
-            <Route exact path='/' element={<Main_page/>}/>
+            <Route exact path='/' element={<Home/>}/>
               <Route exact path='/home' element={<Home/>}/>
               <Route exact path='/services' element={<Services/>}/>
               <Route exact path='/about' element={<About/>}/>
