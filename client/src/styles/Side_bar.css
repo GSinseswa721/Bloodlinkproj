@@ -2,10 +2,11 @@
 .Side_Bar {
     user-select: none;
     position: fixed;
-    min-width: 200px;
-    width: 15vw;
+    width: 250px;
     height: 99.5vh;
-    background-color: #f08080;
+    border-right: 1px solid rgb(160, 159, 159);
+    box-shadow: 0px 3.5px 5px rgb(206, 139, 139);
+    /* background-color: #f08080; */
     grid-row: 1/3;
     display: flex;
     flex-direction: column;
@@ -59,7 +60,12 @@
 .Side_Bar .LinkS {
     padding-left: 30px;
 }
-
+.Side_Bar .LinkSs{
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 .Side_Bar .LinkS.active,
 .Side_Bar .LinkS {
     display: flex;
@@ -70,15 +76,24 @@
     height: 40px;
     cursor: pointer;
     color: black;
+    text-decoration: none;
+}
+.Menu .LinkS.active>i,
+.Menu .LinkS:hover {
+    border-left: 5px solid var(--color-blue) !important;
+    border-radius: 2px !important;
+    color: var(--color-text) !important;
+    background-color: var(--color-mantle) !important;
+
 }
 
-.Side_Bar .LinkS.active,
-.Side_Bar .LinkS:hover {
+/* .Side_Bar .LinkS a.active,
+.Side_Bar .LinkS a:hover {
     border-left: 5px solid var(--color-blue);
     border-radius: 2px;
     color: var(--color-text);
     background-color: var(--color-mantle);
-}
+} */
 
 .Side_Bar .settings {
     margin-top: auto;
@@ -86,4 +101,5 @@
 .icon{
     width: 18px;
     height: 18px;
+    color:#CB2C31
 }

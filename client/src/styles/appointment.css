@@ -28,4 +28,7 @@
     flex-direction: column;
     width: 90rem;
   }
-  
+  .bloodlink-container{
+    display: flex;
+    flex-direction: column;
+  }

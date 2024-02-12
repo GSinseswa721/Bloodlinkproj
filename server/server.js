@@ -18,7 +18,7 @@ const MONGODB_URI = process.env.MONGODB_URL || 'mongodb://127.0.0.1:27017/BloodL
 
 
 var corsOptions = {
-  origin: ['http://localhost:5173', 'http://192.168.196.82:5273', 'http://localhost:5173', 'http://127.0.0.1:5273'],
+  origin: ['http://localhost:5174', 'http://192.168.196.82:5274', 'http://localhost:5174', 'http://127.0.0.1:5274'],
   methods: 'GET, POST, PUT, DELETE',
   allowedHeaders: 'Content-Type, Authorization'
 }

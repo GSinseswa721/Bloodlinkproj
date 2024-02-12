@@ -96,13 +96,12 @@ function Hospitalsignup1() {
                                 onChange={handleChange} required  />  <br />
     </div>
     <div className='hospass'>
-     <label for="PassWord">PassWord:</label><br/>
+     <label for="PassWord">Password:</label><br/>
      <input type="password" name="password" id="Password" placeholder='Password' value={formData.password} 
                                 onChange={handleChange} required /> <br />
      </div>
      </div>
      <br />
-     <input type="checkbox" className='check1'/> Agree To Terms and Conditions <br />
     <br />
      <button className='sign' type='submit'>Create Account</button>
      <br />

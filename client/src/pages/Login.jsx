@@ -9,7 +9,7 @@ const Login = () => {
   const [formData, setFormData] = useState({
     email: '',
     password:'',
-    
+
   });
 
   const handleChange = (e) => {
@@ -32,7 +32,7 @@ headers: {
       });
 
       if (response.ok) {
-       
+
         alert('Form data submitted successfully!');
       } else {
         console.log(response)
@@ -42,17 +42,16 @@ headers: {
     }  catch (error) {
       // console.log("Email or password are incorrect")
       // alert(res.error.message);
-      
+
       // console.error('Error during form submission:', error.message);
     }
   };
     // alert(JSON.stringify(formData, null, 2));
     // window.alert(formData);
 
-
   console.log('Form submitted!', formData);
 
-  // these are the frontend functions to navigate the pages of the dashboards when logged in 
+  // these are the frontend functions to navigate the pages of the dashboards when logged in
   const navigate = useNavigate();
   const [selectedOption, setSelectedOption] = useState('');
 
@@ -75,7 +74,7 @@ headers: {
         navigate('/home');
     }
   };
-    
+
   return (
     <>
       <div>
@@ -88,18 +87,17 @@ headers: {
         <div className='cover'>
         <form action="" method="post" className='input3
         ' placeholder="Role" onSubmit={handleSubmit}>
-          <h2>SignIn</h2>
+          <h2>Sign in</h2>
           <input type='text' name="email" value={formData.email} onChange={handleChange} placeholder='username'/><br/>
           <input type='password'  name="password" value={formData.password} onChange={handleChange} placeholder='password'/><br/>
-          <select value={selectedOption} onChange={handleOptionChange}>
+          {/* <select value={selectedOption} onChange={handleOptionChange}>
             <option value="" disabled selected>Role</option>
-            <option value="User">user</option>
             <option value="Admin">Admin</option>
             <option value="Hospital">Hospital</option>
-           </select><br/>
+           </select><br/> */}
           <p className='text'>Forgot password? <a href="">Click here</a></p><br/>
           <button className='login-btn' type="submit" onClick={handleButtonClick}>Login</button><br/>
-          <p className='text'>Don't have an account? <a href="/signup">Sign Up here</a></p>
+          <p className='text'>Don't have an account? <a href="/hospitalsignup1">Sign Up here</a></p>
         </form>
         </div>
 

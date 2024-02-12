@@ -1,22 +1,19 @@
 .Part_side_bar{
-    
+    width: 105vw;
     height: 100vh;
     display: flex;
+    gap: 5px !important;
 }
 .main_side_bar{
-    width: 20rem;
-   
-    overflow: hidden;
+    width: 30vw !important;
+    overflow: hidden !important ;
 }
 .Part_top_outlet{
-    width: 100rem;
-  
+    width: 150rem;
 }
 .topbar{
-    
     height: 20vh;
 }
 .ooutlet{
-    
-    height: 75vh;
+    height: 100vh;
 }

@@ -1,10 +1,10 @@
 .section_donate{
     position: relative;
-    transform: translateY(5%);
+    transform: translateY(4%);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120vh;
+    height: 155vh;
     gap: 60vh;
 }
 .second_par{
@@ -13,8 +13,8 @@
     border: 0.15px solid darkred ;
     border-radius: 25px;
     box-shadow: 1px 1px 1.5px darkred;
-    width: 50rem;
-    height: 110vh;
+    width: 48rem;
+    height: 150vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,6 +24,10 @@
     font-size: 25px;
 }
 .second_par h3{
-    font-size: 15px;
+    font-size: 19px;
     border-bottom: 2px solid red;
+}
+.labels{
+    font-family: monospace !important;
+    font-weight: bold;
 }

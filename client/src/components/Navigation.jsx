@@ -13,7 +13,7 @@ const Navigation = () => {
   return (
     <>
         <div>
-        <header id="Headers" class="fixed-top d-flex align-items-center">
+        <header id="Headers" class="container-fluid fixed-top d-flex align-items-center">
           <div class="container-fluid d-flex align-items-center justify-content-between">
             <div className="logo">
 
@@ -41,7 +41,7 @@ const Navigation = () => {
                 </li>
                 <li class="nav-link scrollto">
                   <Link to="/documentation" className="link">
-                    Documentation
+                    Q&A
                   </Link>
                 </li>
                 <li class="nav-link scrollto">

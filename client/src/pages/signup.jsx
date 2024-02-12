@@ -225,9 +225,9 @@ const handleChange = (e) => {
                             <br />
                            
                             {/* <input type="checkbox" className="alinecheckk" /> */}
-                            <span className="checkbox-agree"><input type="checkbox" className="box1" /> 
+                            {/* <span className="checkbox-agree"><input type="checkbox" className="box1" /> 
                              Agree To Terms and Conditions</span>
-                          <br />
+                          <br /> */}
                             <button className="alinesignn" type="submit">Create Account</button>
                             <br />
                             {/* <p>
