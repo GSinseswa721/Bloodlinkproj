@@ -26,10 +26,10 @@ function Services() {
        <br />
       <br />
       <div className='text1'>
-       <h4>Pre Book Blood</h4>
+       <h4>Book Appointment for Blood Donation</h4>
        <p>When someone needs blood for medical reasons, the medical facility makes a request to the blood bank, and the blood bank provides the necessary blood type and components from their existing inventory. </p>
        {/* <p>Book Blood for An <br />Upcoming Date </p> */}
-       <button className='serbtn'><a href="#">Click Here</a></button>
+       <button className='serbtn'><a href="/donate_blood">Click Here</a></button>
        </div>
       </div>
       <div className='services2'>
