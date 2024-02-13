@@ -1,137 +1,390 @@
-import React from 'react'
-import '../styles/Side_bar.css'
-import "../assets/assets_1/vendor/boxicons/css/boxicons.min.css" 
-import logo from '../assets/Group 2410logo.svg'
-import { MdDashboard } from "react-icons/md";
-import { FaCalendarAlt } from "react-icons/fa";
-import { IoNotificationsCircle } from "react-icons/io5";
-import { CiSettings } from "react-icons/ci";
-import { AiFillProfile } from "react-icons/ai";
-import { FiLogOut } from "react-icons/fi";
-import { Link } from 'react-router-dom';
-import { Logout } from '@mui/icons-material';
-
+import "../styles/Side_bar.css";
+import "../assets/assets_1/vendor/boxicons/css/boxicons.min.css";
 
 const Side_bar = () => {
-    const logOut = () => {
-        localStorage.removeItem('user');
-        localStorage.removeItem('token');
-        window.location.replace('/home');
-    };
+  const logOut = () => {
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
+    window.location.replace("/home");
+  };
   return (
     <>
-    {/* <div>
-    <div class="Side_Bar">
-        <div class="logo-dashboard">
+      <aside
+        id="default-sidebar"
+        className="fixed top-0 left-0 z-40 w-72 h-screen transition-transform -translate-x-full sm:translate-x-0"
+        aria-label="Sidebar"
+      >
+        {/* Side bar */}
+        <div className="h-full px-3  bg-gray-50 dark:bg-gray-800">
+          <ul className="flex flex-col justify-evenly h-full font-medium overflow-y-hidden">
+            <li>
+              <a
+                href="#"
+                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              >
+                <svg
+                  className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 21"
+                >
+                  <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
+                  <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
+                </svg>
+                <span className="ms-3 text-xl">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              >
+                <svg
+                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 18 18"
+                >
+                  <path d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
+                </svg>
+                <span className="flex-1 ms-3 whitespace-nowrap text-xl">
+                  Hospitals
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              >
+                <svg
+                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z" />
+                </svg>
+                <span className="flex-1 ms-3 whitespace-nowrap text-xl">
+                  Requests
+                </span>
+                <span className="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-xl font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
+                  3
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              >
+                <svg
+                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 18"
+                >
+                  <path d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
+                </svg>
+                <span className="flex-1 ms-3 whitespace-nowrap text-xl">
+                  My Profile
+                </span>
+              </a>
+            </li>
 
-          <div className='logoo'><img src={logo} alt="Checkbox" /></div>
-
-        </div>
-
-        <figure class="Menu">
-          <figcaption>OVERVIEW</figcaption>
-            <div className="LinkSs">
-              <MdDashboard className='icon'/>
-              <Link to="/main_dashboard" className="LinkS"><a>Dashboard</a></Link>
-            </div>
-            <div className="LinkSs">
-              <FaCalendarAlt className='icon' />
-              <Link to="/main_dashboard/appointment"className="LinkS"> <a>Appointments</a></Link>
-            </div>
-            <div className="LinkSs">
-              <IoNotificationsCircle className='icon'/>
-              <Link to="/main_dashboard/notification" className="LinkS" ><a>Notifications</a> </Link>
-            </div >
-        </figure>
-        <figure class="settings">
-          <figcaption>SETUP</figcaption>
-            <div className="LinkSs">
-              <AiFillProfile className='icon'/>
-              <Link to="/main_dashboard/profile" className="LinkS"> Profile</Link>
-            </div>
-            <div className="LinkSs">
-              <FiLogOut className='icon'/>
-              <Link to="" className="LinkS" onClick={logOut}> Log out</Link>
-            </div>
-        </figure>
-      </div>
-    </div> */}
-    <nav>
-      <div class="logo">
-        <i class="bx bx-menu menu-icon"></i>
-        <span class="logo-name">CodingLab</span>
-      </div>
-      <div class="sidebar">
-        <div class="logo">
-          <i class="bx bx-menu menu-icon"></i>
-          <span class="logo-name">CodingLab</span>
-        </div>
-        <div class="sidebar-content">
-          <ul class="lists">
-            <li class="list">
-              <a href="#" class="nav-link">
-                <i class="bx bx-home-alt icon"></i>
-                <span class="link">Dashboard</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="#" class="nav-link">
-                <i class="bx bx-bar-chart-alt-2 icon"></i>
-                <span class="link">Revenue</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="#" class="nav-link">
-                <i class="bx bx-bell icon"></i>
-                <span class="link">Notifications</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="#" class="nav-link">
-                <i class="bx bx-message-rounded icon"></i>
-                <span class="link">Messages</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="#" class="nav-link">
-                <i class="bx bx-pie-chart-alt-2 icon"></i>
-                <span class="link">Analytics</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="#" class="nav-link">
-                <i class="bx bx-heart icon"></i>
-                <span class="link">Likes</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="#" class="nav-link">
-                <i class="bx bx-folder-open icon"></i>
-                <span class="link">Files</span>
+            <li onClick={logOut}>
+              <a
+                href="#"
+                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              >
+                <svg
+                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 16"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"
+                  />
+                </svg>
+                <span className="flex-1 ms-3 whitespace-nowrap text-xl">
+                  Sign Out
+                </span>
               </a>
             </li>
           </ul>
-          <div class="bottom-cotent">
-            <li class="list">
-              <a href="#" class="nav-link">
-                <i class="bx bx-cog icon"></i>
-                <span class="link">Settings</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="#" class="nav-link">
-                <i class="bx bx-log-out icon"></i>
-                <span class="link">Logout</span>
-              </a>
-            </li>
+        </div>
+      </aside>
+
+      {/* Rest of content */}
+      <div className="pl-14 py-4 pr-6 sm:ml-64">
+        <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
+          <div className="grid grid-cols-3 gap-4 mb-4">
+            <div className="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
+                <svg
+                  className="w-3.5 h-3.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 1v16M1 9h16"
+                  />
+                </svg>
+              </p>
+            </div>
+            <div className="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
+                <svg
+                  className="w-3.5 h-3.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 1v16M1 9h16"
+                  />
+                </svg>
+              </p>
+            </div>
+            <div className="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
+                <svg
+                  className="w-3.5 h-3.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 1v16M1 9h16"
+                  />
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+            <p className="text-2xl text-gray-400 dark:text-gray-500">
+              <svg
+                className="w-3.5 h-3.5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 18 18"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 1v16M1 9h16"
+                />
+              </svg>
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-4 mb-4">
+            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
+                <svg
+                  className="w-3.5 h-3.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 1v16M1 9h16"
+                  />
+                </svg>
+              </p>
+            </div>
+            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
+                <svg
+                  className="w-3.5 h-3.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 1v16M1 9h16"
+                  />
+                </svg>
+              </p>
+            </div>
+            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
+                <svg
+                  className="w-3.5 h-3.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 1v16M1 9h16"
+                  />
+                </svg>
+              </p>
+            </div>
+            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
+                <svg
+                  className="w-3.5 h-3.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 1v16M1 9h16"
+                  />
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+            <p className="text-2xl text-gray-400 dark:text-gray-500">
+              <svg
+                className="w-3.5 h-3.5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 18 18"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 1v16M1 9h16"
+                />
+              </svg>
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
+                <svg
+                  className="w-3.5 h-3.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 1v16M1 9h16"
+                  />
+                </svg>
+              </p>
+            </div>
+            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
+                <svg
+                  className="w-3.5 h-3.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 1v16M1 9h16"
+                  />
+                </svg>
+              </p>
+            </div>
+            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
+                <svg
+                  className="w-3.5 h-3.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 1v16M1 9h16"
+                  />
+                </svg>
+              </p>
+            </div>
+            <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
+              <p className="text-2xl text-gray-400 dark:text-gray-500">
+                <svg
+                  className="w-3.5 h-3.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 1v16M1 9h16"
+                  />
+                </svg>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </nav>
-    <section class="overlay"></section>
-      
     </>
   );
-}
+};
 
-export default Side_bar
+export default Side_bar;

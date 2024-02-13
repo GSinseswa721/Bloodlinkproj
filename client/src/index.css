@@ -66,9 +66,35 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#shadow-host-companion {
+  display: none;
+}
+
 body {
   transition: background-color 0.3s;
 }
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
 .light-mode {
   background-color: #ffffff;
   color: #000000;
