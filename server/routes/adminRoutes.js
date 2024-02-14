@@ -3,10 +3,11 @@ const adminController = require('../controllers/adminController');
 const adminHospitalController = require('../controllers/adminHospitalController');
  const { authenticateAdmin } = require('../middleWares/authMiddleware');
 
-const router = express.Router();
+const adminRouter = express.Router();
 
-router.post('/login', adminController.adminLogin);
-router.get('/pending-hospitals', adminHospitalController.viewPendingHospitals);
-router.post('/approve-hospital/:registrationCode', authenticateAdmin, adminController.approveHospital);
+adminRouter.post('/login', adminController.adminLogin);
+adminRouter.put('/admins/:adminId', adminController.updateAdminCredentials);
+adminRouter.get('/pending-hospitals', adminHospitalController.viewPendingHospitals);
+adminRouter.post('/approve-hospital/:registrationCode', authenticateAdmin, adminController.approveHospital);
 
-module.exports = router;
+module.exports = adminRouter;

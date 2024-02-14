@@ -66,9 +66,9 @@ function Hospitalsignup1() {
   return (
     <>
     <Navigation />
-      <section className="container-fluid">
+      <section className="container-fluid m-5">
         <div className="row">
-          <div className="col-md-6  p-5 d-flex justify-content-center align-items-center" >
+          <div className="col-md-6 p-5 d-flex justify-content-center align-items-center" >
             <div className="text-center">
               <Link to="/home">
             <div className="logo"> 

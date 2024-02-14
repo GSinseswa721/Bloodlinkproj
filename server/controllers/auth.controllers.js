@@ -1,6 +1,6 @@
 
 const { model } = require('mongoose');
-const UserModel = require('../models/user.models');
+const UserModel = require('../models/donor.models');
 const bcrypt = require('bcrypt');
 const errorHandler = require('../error/errorHandler');
 require('dotenv').config();

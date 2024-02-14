@@ -1,5 +1,5 @@
 const { CommandSucceededEvent } = require('mongodb');
-const UserModel = require('../models/user.models');
+const UserModel = require('../models/donor.models');
 const err = require('../error/errorHandler');
 const { findUserById } = require('../controllers/auth.controllers');
 const Donation = require('../models/donation.models');

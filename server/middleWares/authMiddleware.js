@@ -18,7 +18,7 @@ exports.authenticateAdmin = async (req, res, next) => {
 
             const admin = await Admin.findById(decoded._id);
             
-            if (admin.email === 'admin@mutonee.com') {
+            if (admin.email === 'rbccmtni1@gmail.com') {
                 req.admin = decoded._id;
                 next();
             } else {
