@@ -18,7 +18,7 @@ const Hospitals = () => {
   };
 
   return (
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg  border border-gray-100">
+    <div className="relative overflow-x-auto shadow-md sm:rounded-lg border border-gray-100">
       {/* search */}
 
       <div className="pb-4 bg-white dark:bg-gray-900 mx-3 mt-3">
@@ -74,6 +74,65 @@ const Hospitals = () => {
           </tr>
         </thead>
         <tbody>
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <th
+              scope="row"
+              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            >
+              King faisal Hospitla
+            </th>
+            <td className="px-6 py-4">Kacyiru-Kigali</td>
+            <td className="px-6 py-4">Private</td>
+            <td className="px-6 py-4 font-semibold">3</td>
+            <td className="px-6 py-4 relative">
+              <a
+                href="#"
+                onClick={() => setShowTooltip(!showTooltip)}
+                className="font-medium text-red-600 dark:text-red-500 hover:underline text-2xl"
+              >
+                <PiDotsThreeCircleVertical />
+              </a>
+              {showTooltip && <Tooltip />}
+            </td>
+          </tr>
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <th
+              scope="row"
+              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            >
+              Kacyiru hospital
+            </th>
+            <td className="px-6 py-4">Kacyiru-Kigali</td>
+            <td className="px-6 py-4">Public</td>
+            <td className="px-6 py-4 font-semibold">20</td>
+            <td className="px-6 py-4">
+              <a
+                href="#"
+                className="font-medium text-red-600 dark:text-red-500 hover:underline text-2xl"
+              >
+                <PiDotsThreeCircleVertical />
+              </a>
+            </td>
+          </tr>
+          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <th
+              scope="row"
+              className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            >
+              CHUK
+            </th>
+            <td className="px-6 py-4">Nyarugenge-kigali</td>
+            <td className="px-6 py-4">Public</td>
+            <td className="px-6 py-4 font-semibold">6</td>
+            <td className="px-6 py-4">
+              <a
+                href="#"
+                className="font-medium text-red-600 dark:text-red-500 hover:underline text-2xl"
+              >
+                <PiDotsThreeCircleVertical />
+              </a>
+            </td>
+          </tr>
           <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <th
               scope="row"

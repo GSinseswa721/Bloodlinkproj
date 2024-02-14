@@ -14,6 +14,7 @@ import Donate_blood from "./pages/Donate_blood.jsx";
 import Hospitalsignup1 from "./pages/hospitalsignup1.jsx";
 import EditProfile from "./pages/admin-dashboard/profile/index.jsx";
 import ViewHospitals from "./pages/admin-dashboard/hospitals/index.jsx";
+import AdminDashBoard from "./pages/admin-dashboard/dashboard/index.jsx";
 
 // const isAuthenticated = true;
 
@@ -33,7 +34,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route exact path="/donate_blood" element={<Donate_blood />} />
 
         {/* {isAuthenticated && ( */}
-        {/* <Route exact path="/dashboard" element={<Dashboard />} /> */}
+        <Route exact path="/admin/dashboard" element={<AdminDashBoard />} />
         <Route exact path="/admin/my-profile" element={<EditProfile />} />
         <Route exact path="/admin/hospitals" element={<ViewHospitals />} />
 
