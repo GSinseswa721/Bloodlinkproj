@@ -1,9 +1,21 @@
 import { useState } from "react";
 import { PiDotsThreeCircleVertical } from "react-icons/pi";
 import Tooltip from "./Tooltip";
+import axios from "axios";
 
 const Hospitals = () => {
   const [showTooltip, setShowTooltip] = useState(false);
+  const [hospitalData, setHospitalData] = useState({});
+
+  const getHospitals = async () => {
+    try {
+      const data = await axios.get(url).then((response) => {
+        setHospitalData(response.data);
+      });
+    } catch (error) {
+      console.error(error, "arror");
+    }
+  };
 
   return (
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg  border border-gray-100">

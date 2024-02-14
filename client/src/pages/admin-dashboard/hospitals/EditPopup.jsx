@@ -1,6 +1,7 @@
+import { useEffect } from "react";
 import { MdClose } from "react-icons/md";
 
-const EditPopup = (setShowEditPopup) => {
+const EditPopup = ({ setShowEditPopup }) => {
   return (
     <div
       id="popup"
@@ -13,7 +14,9 @@ const EditPopup = (setShowEditPopup) => {
             fontWeight={900}
             fontSize={30}
             className="cursor-pointer "
-            onClick={() => setShowEditPopup(false)}
+            onClick={() => {
+              setShowEditPopup(false), console.log("Show");
+            }}
           />
         </div>
         <div className="mb-3">
