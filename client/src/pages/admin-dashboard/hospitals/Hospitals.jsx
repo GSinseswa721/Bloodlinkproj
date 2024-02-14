@@ -4,6 +4,7 @@ import Tooltip from "./Tooltip";
 
 const Hospitals = () => {
   const [showTooltip, setShowTooltip] = useState(false);
+
   return (
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg  border border-gray-100">
       {/* search */}
